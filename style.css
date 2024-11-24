@@ -1,0 +1,104 @@
+/* General styling for the popup body */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 10px;
+  color: #333;
+  width: 300px;
+}
+
+/* Heading style */
+h1 {
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0073e6;
+  color: #0073e6;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* Table headers */
+table th {
+  background-color: #0073e6;
+  color: white;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Table rows */
+table td {
+  padding: 8px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row coloring */
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+table tr:hover {
+  background-color: #e6f7ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 320px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+#reset-time-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+#reset-time-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+#reset-time-btn:active {
+  background-color: #e74c3c;
+  transform: scale(0.98);
+}
+
+#reset-time-btn:focus {
+  outline: none;
+}
+
+/* Styling for remove button (X) */
+.remove-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+}
+
+.remove-btn:active {
+  background-color: #e74c3c;
+}
