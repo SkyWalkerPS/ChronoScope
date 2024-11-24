@@ -49,6 +49,7 @@ table tr:nth-child(even) {
 /* Hover effect for rows */
 table tr:hover {
   background-color: #e6f7ff;
+  cursor: pointer;
 }
 
 /* Responsive adjustments */
@@ -101,4 +102,36 @@ table tr:hover {
 
 .remove-btn:active {
   background-color: #e74c3c;
+}
+
+/* Style for the back button */
+#back-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Style for hover effect */
+#back-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: translateY(-2px); /* Slightly move up when hovered */
+}
+
+/* Style for active state */
+#back-btn:active {
+  background-color: #388e3c; /* Even darker green when clicked */
+  transform: translateY(0); /* Reset the movement when clicked */
+}
+
+/* Optional: Center the button in the page if necessary */
+#time-table {
+  text-align: center;
 }
