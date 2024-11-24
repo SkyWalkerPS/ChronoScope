@@ -6,16 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${hours}:${minutes.toString().padStart(2, '0')}:${secondsRemaining.toString().padStart(2, '0')}`;
   }
 
-  // Update the table with the latest time data
+  
   function updateTable() {
     chrome.storage.local.get("domainTime", (result) => {
-      const response = result.domainTime || {}; // Default to an empty object if no data is found
-      const table = document.querySelector("#time-table");
-
-      // Clear existing table content
+      const response = result.domainTime || {}; 
+      const table = document.querySelector("#time-table");      
       table.innerHTML = "<tr><th>Domain</th><th>Time Spent(s)</th><th>Action</th></tr>";
 
-      // Loop through the response and add rows for each domain
+      
       for (const [domain, time] of Object.entries(response)) {
         const row = `<tr>
                       <td>${domain}</td>
@@ -25,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         table.innerHTML += row;
       }
 
-      // Add event listeners to each "X" button
+      
       const removeButtons = document.querySelectorAll(".remove-btn");
       removeButtons.forEach((button) => {
         button.addEventListener("click", () => {
@@ -36,19 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Function to remove a domain from storage and reset its time
+  
   function removeDomain(domain) {
     chrome.storage.local.get("domainTime", (result) => {
       const currentDomainTime = result.domainTime || {};
-      // Delete the domain from the object
       delete currentDomainTime[domain];
-      // Update storage
       chrome.storage.local.set({ domainTime: currentDomainTime });
-      updateTable();  // Update the table after removing the domain
+      updateTable();  
     });
   }
 
-  // Reset time for all domains
+  
   const resetTimeBtn = document.getElementById("reset-time-btn");
   resetTimeBtn.addEventListener("click", () => {
     chrome.storage.local.set({ domainTime: {} });
@@ -56,5 +52,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   updateTable();
-  setInterval(updateTable, 1000);  // Update the table every second
+  setInterval(updateTable, 1000);  
 });

@@ -11,11 +11,10 @@ A simple and minimalistic Chrome extension, made it solely for personal use in o
 
 ## Installation
 1. Download the Extension Code
-    - Clone or download the repository:
+- Clone or download the repository:
     ```Bash
     git clone https://github.com/SkyWalkerPS/ChronoScope.git
     ```
-
 
 2. Load Extension in Chrome
 - Open Chrome and navigate to chrome://extensions/.
